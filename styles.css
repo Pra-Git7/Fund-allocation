@@ -1,0 +1,19 @@
+
+body{
+  /* background-image: url('money.jpg'); */
+  background-size: cover;  
+  background-repeat: no-repeat; 
+  background-size: cover;
+  background-position: center ;
+  background-opacity: 0.8; /* This will not work in all browsers */
+  /* To add background opacity, use an overlay or rgba color for background */
+  
+}
+h1 {
+text-align: center;
+color:green;
+
+}
+h2{
+    text-align: center;
+}
