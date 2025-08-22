@@ -19,8 +19,8 @@ if($insert_query)
 }
 
 
-$stmt->close();
-$conn->close();
+
 
 ?>
+
 
