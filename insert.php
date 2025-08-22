@@ -9,16 +9,18 @@ $site_name = $_POST['site_name'] ?? null;
 $gst = $_POST['gst'] ?? null;
 $invoice_date = $_POST['invoice_date'] ?? null;
 
-$stmt = $conn->prepare("INSERT INTO `project`(`ref`, `date`, `client`, `site_name`, `gst`, `invoice_date`) VALUES (?, ?, ?, ?, ?, ?)");
-$stmt->bind_param("ssssss", $ref, $date, $client, $site_name, $gst, $invoice_date);
+$insert_query = mysqli_query($conn,
+"INSERT INTO `project`(`ref`, `date`, `client`, `site_name`, `gst`,invoice date) 
+VALUES ('$ref','$date','$client','$site_name','$gst',$invoice_date') ");
 
-if ($stmt->execute()) {
+if($insert_query)
+{
     echo "Data Added Successfully";
-} else {
-    echo "Error: " . $stmt->error;
 }
+
 
 $stmt->close();
 $conn->close();
 
 ?>
+
